@@ -1,10 +1,24 @@
-# Legacy Notice
+# NOVUS-OS Agent
+![NOVUS-OS Banner](ссылка_на_красивую_картинку_с_логотипом)
 
-This repository is legacy and kept for transition history.
-Active public repository: https://github.com/SGC-NOVUS/agent
+Official high-performance daemon for game server and node management.
 
-# novus-agent-go
+## Repository Role
+Public release channel for NOVUS-OS Agent binaries, installer artifacts, and operator documentation.
 
-Репозиторий: novus-agent-go
-Агент для NOVUS-OS
-Версия сборки: tag/SHA
+## Build Origin
+Private source repository: SGC-NOVUS/agent-core.
+
+## Release Flow
+1. Development is performed in SGC-NOVUS/agent-core.
+2. CI/CD builds versioned agent artifacts.
+3. Release is published to SGC-NOVUS/agent.
+
+## Integration
+NOVUS-OS Panel communicates with Agent using authenticated HTTP APIs.
+
+## Security
+Use signed release artifacts and rotate secrets according to policy.
+
+## License
+See LICENSE in this repository.
