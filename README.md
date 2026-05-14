@@ -17,6 +17,25 @@ Private source repository: SGC-NOVUS/agent-core.
 ## Integration
 NOVUS-OS Panel communicates with Agent using authenticated HTTP APIs.
 
+## Install
+
+Latest public releases publish these canonical assets:
+
+- `novus-agent-linux-amd64`
+- `novus-agent-linux-arm64`
+- `install-novus-agent.sh`
+
+Example install flow:
+
+```bash
+PANEL_URL=https://panel.example.com \
+PANEL_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... \
+AGENT_SHARED_SECRET=change-me \
+AGENT_ID=agent-01 \
+bash <(curl -fsSL https://github.com/SGC-NOVUS/agent/releases/download/vX.Y.Z/install-novus-agent.sh)
+systemctl enable --now novus-agent
+```
+
 ## Security
 Use signed release artifacts and rotate secrets according to policy.
 
